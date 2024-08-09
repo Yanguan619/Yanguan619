@@ -1,5 +1,5 @@
 ---
-title: 对MINIST实现K-Means聚类
+title: 对 MINIST 实现 K-Means 聚类
 abbrlink: 26757
 date: 2022-01-23
 cover: https://scikit-learn.org.cn/upload/4d8344fef1d9094044a328f8c6966f29.png
