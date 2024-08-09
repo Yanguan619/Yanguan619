@@ -30,6 +30,7 @@
     "hexo-server": "^3.0.0",
     "hexo-theme-landscape": "^1.0.0",
     "hexo-util": "^3.2.0",
-    "katex": "^0.16.9"
+    "katex": "^0.16.9",
+    "picocolors": "^1.0.1"
   }
 }

@@ -9,6 +9,7 @@ aliases:
 tags:
 categories:
 ---
+
 # pip 与 conda 配置
 
 up:: [[Python]]
@@ -74,7 +75,7 @@ pip install -i https://pypi.doubanio.com/simple/ --trusted-host pypi.doubanio.co
 
 ### 换源
 
-{% tabs %}
+<!-- {% tabs %} -->
 
 <!-- tab 清华源 -->
 
@@ -117,7 +118,7 @@ conda config --add channels https://pypi.tuna.tsinghua.edu.cn/simple
 
 <!-- endtab -->
 
-{% endtabs %}
+<!-- {% endtabs %} -->
 
 验证镜像源配置成功否
 
@@ -133,7 +134,7 @@ conda config --add channels https://pypi.tuna.tsinghua.edu.cn/simple
 
 ### 虚拟环境
 
-{% tabs %}
+<!-- {% tabs %} -->
 
 <!-- tab 1、创建虚拟环境 -->
 
@@ -153,7 +154,7 @@ conda config --add channels https://pypi.tuna.tsinghua.edu.cn/simple
 
 <!-- endtab -->
 
-{% endtabs %}
+<!-- {% endtabs %} -->
 
 #### 虚拟环境制作与导出
 
