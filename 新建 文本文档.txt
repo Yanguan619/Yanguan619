@@ -1,0 +1,2 @@
+- svelte具有严格的路由规范，每个md文件都要放在单独文件夹下且md文件名改为+page.md【参考：[github](https://github.com/SveltePress/sveltepress/tree/main/packages/docs-site/src/routes/guide/)】【故暂时使用vuepress】
+
