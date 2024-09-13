@@ -15,4 +15,4 @@ Here are some ideas to get you started:
 - ⚡ Fun fact: ...
 -->
 
-[博客](https://yanguan02.gitee.io/yanguan/)
+[博客](https://yanguan619.github.io/Yanguan619/)
