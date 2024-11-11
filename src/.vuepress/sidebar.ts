@@ -5,10 +5,10 @@ export default sidebar({
     "",
     "portfolio",
     {
-      text: "案例",
+      text: "Wiki",
       icon: "laptop-code",
-      prefix: "demo/",
-      link: "demo/",
+      prefix: "wiki/",
+      link: "wiki/",
       children: "structure",
     },
     {

@@ -1,0 +1,44 @@
+    1  sudo passwd root
+    2  sudo nano /etc/ssh/sshd_config
+    3  vi /etc/ssh/sshd_config
+    4  vi /etc/ssh/sshd_config
+    5  sudo service ssh start
+    6  sudo systemctl restart sshd
+    7  ls /etc/network/
+    8  cd /etc/
+    9  ls
+   10  cd netplan/
+   11  ls
+   12  vi 50-cloud-init.yaml 
+   13  sudo systemctl restart networking
+   14  netplan apply
+   15  ping www.baidu.com
+   16  cd /home/
+   17  ll
+   18  chmod +x Ascend-hdk-910b-npu-*
+   19  ll
+   20  ./Ascend-hdk-910b-npu-driver_23.0.3_linux-aarch64.run --check
+   21  ./Ascend-hdk-910b-npu-firmware_7.1.0.5.220.run --check
+   22  ./Ascend-hdk-910b-npu-driver_23.0.3_linux-aarch64.run --full
+   23  groupadd HwHiAiUser
+   24  useradd -g HwHiAiUser -d /home/HwHiAiUser -m HwHiAiUser -s /bin/bash
+   25  ./Ascend-hdk-910b-npu-driver_23.0.3_linux-aarch64.run --full
+   27  apt-get update
+   28  apt-get install -y dkms gcc linux-header-$(uname -r)
+   32  apt-get install -y dkms gcc linux-header
+   37  apt-get install net-tools
+   38  ifconfig
+   44  apt-get install gcc
+   45  gcc --version
+   46  ./Ascend-hdk-910b-npu-driver_23.0.3_linux-aarch64.run --full  --install-for-all
+   47  apt-get install make
+   48  ./Ascend-hdk-910b-npu-driver_23.0.3_linux-aarch64.run --full  --install-for-all
+   49  reboot
+   50  npu-smi info
+   51  cd /home/
+   52  ll
+   53  ./Ascend-hdk-910b-npu-firmware_7.1.0.5.220.run --full 
+   54  reboot
+   55  npu-smi info
+
+

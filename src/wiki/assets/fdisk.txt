@@ -1,0 +1,54 @@
+Disk /dev/loop0: 59.75 MiB, 62652416 bytes, 122368 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+
+
+Disk /dev/loop1: 77.38 MiB, 81137664 bytes, 158472 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+
+
+Disk /dev/loop2: 33.71 MiB, 35344384 bytes, 69032 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+
+
+Disk /dev/nvme1n1: 3.49 TiB, 3840755982336 bytes, 7501476528 sectors
+Disk model: HWE62P443T8L005N                        
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disklabel type: gpt
+Disk identifier: D03D5E35-0A16-4626-BFC3-ED024E8A5D2B
+
+Device         Start        End    Sectors  Size Type
+/dev/nvme1n1p1  2048 7501473791 7501471744  3.5T Linux filesystem
+
+
+Disk /dev/nvme0n1: 3.49 TiB, 3840755982336 bytes, 7501476528 sectors
+Disk model: HWE62P443T8L005N                        
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disklabel type: gpt
+Disk identifier: FE2E787E-63F4-4599-97EA-A98B96091055
+
+Device           Start        End    Sectors  Size Type
+/dev/nvme0n1p1    2048    2203647    2201600    1G EFI System
+/dev/nvme0n1p2 2203648    6397951    4194304    2G Linux filesystem
+/dev/nvme0n1p3 6397952 7501473791 7495075840  3.5T Linux filesystem
+
+
+Disk /dev/mapper/ubuntu--vg-ubuntu--lv: 100 GiB, 107374182400 bytes, 209715200 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+
+
+Disk /dev/mapper/ubuntu--vg-lv--0: 3.39 TiB, 3730103599104 bytes, 7285358592 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes

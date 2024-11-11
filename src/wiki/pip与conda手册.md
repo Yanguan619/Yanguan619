@@ -14,66 +14,51 @@ categories:
 
 up:: [[Python]]
 
+## pip
+
+略
+
 ## conda
 
 > `conda`是`Anaconda`带的命令，有关`pip`的命令换成`conda`一般都适用。
-> *不过我一般在conda环境下下载pip然后使用pip。*
 
-## conda下载
+下载包管理器 Anaconda：[Anaconda](https://www.anaconda.com/download) 或 [Miniconda](https://mirrors.bfsu.edu.cn/anaconda/miniconda/?C=M&O=D)(建议)
 
-下载包管理器 Anaconda：[Anaconda](https://www.anaconda.com/download) 或 [Miniconda](https://mirrors.bfsu.edu.cn/anaconda/miniconda/?C=M&O=D)
+## 常用命令
 
-## pip 换源
+### pip换源
 
 ```sh
 pip config set global.index-url https://pypi.mirrors.ustc.edu.cn/simple/
-
 pip config set global.extra-index-url "https://pypi.mirrors.ustc.edu.cn/simple/ https://pypi.douban.com/simple/ https://pypi.huaweicloud.com/simple/"
 ```
 
-- 常用源：
-  - 阿里云 http://mirrors.aliyun.com/pypi/simple/
-  - 清华大学 https://pypi.tuna.tsinghua.edu.cn/simple/
-  - 中国科学技术大学 http://pypi.mirrors.ustc.edu.cn/simple/
-  - 豆瓣 https://pypi.douban.com/simple/
+常用源：
 
-*查看当前源*
+- 中国科学技术大学 http://pypi.mirrors.ustc.edu.cn/simple/
+- 阿里云 http://mirrors.aliyun.com/pypi/simple/
+- 清华大学 https://pypi.tuna.tsinghua.edu.cn/simple/
+- 豆瓣 https://pypi.douban.com/simple/
 
-`pip config list`
-
-临时使用镜像源
-
-````sh
-pip install -i https://pypi.doubanio.com/simple/ --trusted-host pypi.doubanio.com pillow
-````
-
-更新 pip
-
-`pip install --upgrade pip`
-
-重新安装 pip
-
-`python -m ensurepip`
-
-<details close>
-<summary> pip其他命令</summary>
+### pip其他命令
 
 1. 查看 pip 版本和路径 `pip -V`
-2. 卸载已安装的库 `pip uninstall pillow`
-3. 列出已经安装的库 `pip list`
-4. 查看已安装的库的版本 `pip show matplotlib`
-5. 查看指定库的所有版本 `pip install matplotlib==`
-6. 更新库 `pip install --upgrade matplotlib`
-7. 指定版本安装 (使用 ==,  >=,  <=,  >,  < 指定一个版本号 ) `pip install matplotlib>=3.5.1`
-8. 将已经安装的库列表保存到文本文件中 `pip freeze > requirements.txt`
-9. 根据依赖文件批量安装库，使用上面的txt文件，批量安装第三方库。 `pip install -r requirements.txt`
-10. 离线安装库 `pip install pillow-4.2xxxxxxx.whl`
+2. 列出已经安装的库 `pip list`
+3. 指定版本安装 (使用 ==,  >=,  <=,  >,  < 指定一个版本号 ) `pip install matplotlib>=3.5.1`
+4. 根据依赖文件批量安装第三方库 `pip install -r requirements.txt`
+5. 离线库文件安装 `pip install pillow-4.2xxxxxxx.whl`
+6. 安装依赖时临时使用镜像源：`pip install -i https://pypi.doubanio.com/simple/ --trusted-host pypi.doubanio.com pillow`
+7. 查看指定库的所有版本 `pip install matplotlib==`
+8. 更新库 `pip install --upgrade matplotlib`
+9. 卸载已安装的库 `pip uninstall pillow`
+10. 将已经安装库列表保存到文本文件 `pip freeze > requirements.txt`
 11. 查看当前源 `pip config list`
-12. 临时使用镜像源 `pip install -i https://pypi.doubanio.com/simple/ --trusted-host pypi.doubanio.com pillow`
+12. 更新 pip：`pip install --upgrade pip`
+13. 重新安装 pip：`python -m ensurepip`
+14. 查看已安装的库的版本 `pip show matplotlib`
 
-</details>
 
-### 换源
+### conda换源
 
 ::: tabs
 
@@ -115,19 +100,15 @@ conda config --add channels https://pypi.tuna.tsinghua.edu.cn/simple
 
 :::
 
-验证镜像源配置成功否
+### conda其他命令
 
-`conda config --show channels`
+1. 验证镜像源配置成功否 `conda config --show channels`
+2. 设置搜索时显示通道地址 `conda config --set show_channel_urls yes`
+3. 删除所有源 `conda config --remove-key channels`
 
-设置搜索时显示通道地址
+## 虚拟环境
 
-`conda config --set show_channel_urls yes`
-
-删除所有源
-
-`conda config --remove-key channels`
-
-### 虚拟环境
+### conda虚拟环境
 
 ::: tabs
 
@@ -147,21 +128,22 @@ conda config --add channels https://pypi.tuna.tsinghua.edu.cn/simple
 
 :::
 
-#### 虚拟环境制作与导出
+### 虚拟环境制作与导出
 
 > 参考：https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#building-identical-conda-environments
 
-#### 构建相同的 conda 环境
+### 构建相同的conda虚拟环境
 
 ```sh
-conda clean -p      //删除没有用的包
-conda clean -t      //tar打包
-conda clean -y -all //删除所有的安装包及cache
+conda clean -p       // 删除没有用的包
+conda clean -t       // tar打包
+conda clean -y -all  // 删除所有的安装包及cache
 ```
 
-可以使用显式规范文件来构建相同的 Conda 环境(明确的规范文件通常不是跨平台的)。
+可以使用显式规范文件来构建相同的 Conda 环境（明确的规范文件通常不是跨平台的）。
 
 <details close>
+
 <summary>使用终端执行 `conda list --explicit > spec-file.txt` 运行以生成规范列表</summary>
 
 ```sh
@@ -185,9 +167,9 @@ https://repo.anaconda.com/pkgs/free/osx-64/zlib-1.2.8-3.tar.bz2
 
 </details>
 
-使用 spec 文件创建环境：`conda create --name myenv --file spec-file.txt`
+使用 spec 文件创建虚拟环境：`conda create --name myenv --file spec-file.txt`
 
-#### pipenv创建python虚拟环境（打包时使用）
+### pipenv创建python虚拟环境（打包时使用）
 
 因为在打包环境下会引入了很多不必要的文件，一块打包会导致在生成exe文件过大，而在虚拟纯净环境里打包程序可以有效避免。
 
