@@ -15,8 +15,13 @@ Here are some ideas to get you started:
 - ⚡ Fun fact: ...
 -->
 
-![stats](https://github-readme-stats.vercel.app/api?username=Yanguan619&show_icons=true&theme=merko)
+![stats](https://github-readme-stats.vercel.app/api?username=Yanguan619&show_icons=true&theme=dark)
+![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=Yanguan619&show_icons=true&theme=dark)
 
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=Yanguan619)
 
-[博客](https://yanguan619.github.io/Yanguan619/)
+<p align="center">
+    <a href="https://yanguan619.github.io/Yanguan619/" target="_blank">
+        博客
+    </a>
+</p>
+
